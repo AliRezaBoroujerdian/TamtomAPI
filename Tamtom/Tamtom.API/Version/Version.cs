@@ -8,6 +8,7 @@ namespace Tamtom.API.Version
     {
         public Version() : base("Version", "Application") { }
 
+
         #region Not implemented method
         public Task<int> DeActive(CrudModels.PrimaryKeyID id)
         {
