@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>AliRezaBoroujerdian</Authors>
+    <Company>Tamtom</Company>
+    <Description>tamtom api tools</Description>
+    <Copyright>2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/AliRezaBoroujerdian/TamtomAPI</PackageProjectUrl>
+    <PackageIcon>Rectangle 1 copy 11.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageTags>API, Tamtom, AliRezaBoroujerdian</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Version\" />
+    <None Include="E:\Tamtom\Design\logo\20190612\Rectangle 1 copy 11.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
