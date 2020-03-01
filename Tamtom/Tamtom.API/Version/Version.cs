@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Tamtom.Database.Dapper.Crud;
 
@@ -8,6 +9,23 @@ namespace Tamtom.API.Version
     {
         public Version() : base("Version", "Application") { }
 
+        private static IEnumerable<VersionModel> versionModels;
+
+        public async static Task<bool> IsValid(string key)
+        {
+            if (versionModels == null)
+                versionModels = (await new Version().Select<VersionModel>(new CrudModels.SelectModel()));
+
+            foreach (VersionModel item in versionModels)
+            {
+                if (item.Key == key & item.IsActive == true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         #region Not implemented method
         public Task<int> DeActive(CrudModels.PrimaryKeyID id)
